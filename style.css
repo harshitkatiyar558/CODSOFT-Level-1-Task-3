@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    max-width: 360px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .display {
+    grid-column: 1 / -1;
+    padding: 15px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  #expression {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  #result {
+    font-size: 32px;
+    margin-top: 5px;
+  }
+  
+  .display2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    color: #444;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    padding: 15px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  .btn:hover {
+    background-color: #555;
+  }
+  
+  .btn:active {
+    background-color: #666;
+    transform: scale(0.98);
+  }
+  
+  .btn.operator {
+    background-color: #ff9500;
+  }
+  
+  .btn.operator:hover {
+    background-color: #ffb84d;
+  }
+  
+  .btn.operator:active {
+    background-color: #ffcc80;
+  }
+  
+  .btn.double-width {
+    grid-column: span 2;
+  }
+  
+  .btn.zero {
+    grid-column: span 2;
+  }
+  
+  .btn.clear {
+    background-color: #ff3b30;
+  }
+  
+  .btn.clear:hover {
+    background-color: #ff6b6b;
+  }
+  
+  .btn.clear:active {
+    background-color: #ff8c8c;
+  }
+  
+  .btn.backspace {
+    background-color: #007aff;
+  }
+  
+  .btn.backspace:hover {
+    background-color: #3399ff;
+  }
+  
+  .btn.backspace:active {
+    background-color: #66b3ff;
+  }
+  
+  .btn.sqrtn, .btn.percent, .btn.negate {
+    background-color: #5856d6;
+  }
+  
+  .btn.sqrtn:hover, .btn.percent:hover, .btn.negate:hover {
+    background-color: #6f6bff;
+  }
+  
+  .btn.sqrtn:active, .btn.percent:active, .btn.negate:active {
+    background-color: #8a8aff;
+  }
+  
+  @media (max-width: 400px) {
+    .calculator {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .btn {
+      font-size: 20px;
+      padding: 12px;
+    }
+  
+    .display {
+      font-size: 22px;
+    }
+  }
+  
